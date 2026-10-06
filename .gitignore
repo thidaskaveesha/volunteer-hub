@@ -6,7 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
+# Diagnostic reports
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 # Runtime data
@@ -25,23 +25,26 @@ coverage
 # nyc test coverage
 .nyc_output
 
-# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+# Grunt intermediate storage
 .grunt
 
-# Bower dependency directory (https://bower.io/)
+# Bower dependency directory
 bower_components
 
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons
 build/Release
 
 # Dependency directories
 node_modules/
+**/node_modules/
+
+# JSPM packages
 jspm_packages/
 
-# Snowpack dependency directory (https://snowpack.dev/)
+# Snowpack dependency directory
 web_modules/
 
 # TypeScript cache
@@ -65,12 +68,20 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
+# Environment variable files
+# Ignore .env files in any directory
 .env
-.env.*
-!.env.example
+**/.env
 
-# parcel-bundler cache (https://parceljs.org/)
+# Ignore .env.* files in any directory
+.env.*
+**/.env.*
+
+# Keep .env.example files
+!.env.example
+!**/.env.example
+
+# Parcel bundler cache
 .cache
 .parcel-cache
 
@@ -78,33 +89,30 @@ web_modules/
 .next
 out
 
-# Nuxt.js build / generate output
+# Nuxt.js build output
 .nuxt
 dist
 .output
 
 # Gatsby files
 .cache/
-# Comment in the public line in if your project uses Gatsby and not Next.js
-# https://nextjs.org/blog/next-9-1#public-directory-support
-# public
 
-# vuepress build output
+# VuePress build output
 .vuepress/dist
 
-# vuepress v2.x temp directory
+# VuePress v2.x temp
 .temp
 
-# Sveltekit cache directory
+# SvelteKit cache directory
 .svelte-kit/
 
-# vitepress build output
+# VitePress generated files
 **/.vitepress/dist
 
-# vitepress cache directory
+# VitePress cache
 **/.vitepress/cache
 
-# Docusaurus cache and generated files
+# Docusaurus
 .docusaurus
 
 # Serverless directories
@@ -122,13 +130,13 @@ dist
 # TernJS port file
 .tern-port
 
-# Stores Visual Studio Code versions used for testing Visual Studio Code extensions
+# Stores Visual Studio Code versions used for testing VS Code extensions
 .vscode-test
 
 # pnpm
 .pnpm-store
 
-# yarn v3
+# Yarn v3
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -146,4 +154,4 @@ vite.config.ts.timestamp-*
 .astro/
 
 # Turbo Repo
-.turbo
+.turbo/
